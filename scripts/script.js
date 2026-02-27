@@ -20,25 +20,25 @@ async function getChapterData(chapter) {
 
 //button that leads to avatars
 
-function createButtonScreen (text) {
+function createButtonScreen (obj) {
 const textScreen = document.createElement("div")
    textScreen.classList.add("screen")
-   textScreen.addEventListener("click", nextScreen)
+ 
 
 const textContainer = document.createElement("div")
 textContainer.classList.add("vn-panel")
 const textParagraph = document.createElement("p")
 textParagraph.classList.add("vn-text")
-textParagraph.innerHTML=text
+textParagraph.innerHTML=obj.text
 
 textContainer.append(textParagraph)
 
 const btn = document.createElement("button")
 btn.classList.add("vn-button")
-btn.innerHTML = "К аватарам"
+btn.innerHTML = obj.btnText
 btn.addEventListener("click", () => {
 
-window.location.href = "avatar-choice.html"
+window.location.href = obj.link
 
 })
 
@@ -393,8 +393,8 @@ async function loadTheText(num) {
 
     switch (array[i].type) {
 
-      case "to-avatar-selection":
-        var btnContainer = createButtonScreen(array[i].text)
+      case "button":
+        var btnContainer = createButtonScreen(array[i])
         container.append(btnContainer)
         break;
         case "title":
