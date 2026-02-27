@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Visual Novel Skeleton</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="game-screen">
+
+    <!-- Background -->
+    <div class="background chapter1"></div>
+   <div id="container">
+   
+</div>
+
+<div class="selection-container" id = "avatar-container">
+  <h1>Чуз ёр файтер</h1>
+
+  <p>В данном деле разрабы, скотины такие просят описать тебя как персонажа этой игры. Выбери по-братски какой ты герой и в чем твой лор</p>
+
+  <div class="avatars">
+    <div class="avatar-card" onclick="selectAvatar(this)">
+      <img src="data/img/mc_1.jpg" alt="">
+      <div class="avatar-name">Вариант 1: </div>
+      <div class="avatar-desc">Владеешь терапевтическим жаргоном, как родным языком. </div>
+    </div>
+
+    <div class="avatar-card" onclick="selectAvatar(this)">
+      <img src="data/img/mc_2.jpg" alt="">
+      <div class="avatar-name">Вариант 2:</div>
+      <div class="avatar-desc">Интилектуал. Больше слов не надо.</div>
+    </div>
+
+    <div class="avatar-card" onclick="selectAvatar(this)">
+      <img src="data/img/mc_3.jpg" alt="">
+      <div class="avatar-name">Вариант 3:</div>
+      <div class="avatar-desc">Любишь деньги и надеешься на взаимность</div>
+    </div>
+
+    <div class="avatar-card" onclick="selectAvatar(this)">
+      <img src="data/img/mc_4.jpg" alt="">
+      <div class="avatar-name">Вариант 4:</div>
+      <div class="avatar-desc">Страдающий художник</div>
+    </div>
+  </div>
+
+  <button class="confirm-btn" onclick="confirmSelection()">Подтвердить выбор</button>
+</div>
+  </div>
+</body>
+
+
+<script src="scripts/script.js"></script>
+
+
+</html>
